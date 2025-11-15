@@ -1,13 +1,11 @@
-# palindrome.py
+import sys
 
-# Program to check if a string is a palindrome using if–else statements
+if len(sys.argv) < 2:
+    print("Please provide a string as a command-line argument.")
+    sys.exit()
 
-string = input("Enter a string: ")
-
-# Convert to lowercase and remove spaces
+string = sys.argv[1]
 processed = string.lower().replace(" ", "")
-
-# Reverse the string manually
 reverse_str = processed[::-1]
 
 if processed == reverse_str:
